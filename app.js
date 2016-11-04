@@ -1,16 +1,3 @@
-/*
-
-- Total word count of the submitted text
-
-- Unique word count of the submitted text
-
-- Average word length in characters of the submitted text
-
-- Average sentence length in characters of the submitted text.
-
-*/
-
-
 (function textAnalyzer() {
   "use strict";
 
@@ -46,7 +33,8 @@
 
     let averageSentenceLength = (function () {
       let numSentences = sentences.length;
-      let sentencesLength = sentences.map(x => x.length).reduce((x, y) => x + y);
+      let sentencesLength = sentences.map(x => x.length)
+        .reduce((x, y) => x + y);
 
       return (sentencesLength / numSentences).toFixed(2);
     }());
